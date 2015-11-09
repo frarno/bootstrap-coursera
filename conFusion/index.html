@@ -93,7 +93,7 @@
         </div>
     </div>    
     
-    <div class="modal fade" id=reserveTable role="dialog">
+    <div class="modal fade" id="reserveTableModal" role="dialog">
         <div class="modal-dialog">
         <div class="modal-content" style="color:black">
           <div class="modal-header">
@@ -188,7 +188,7 @@
                     <p style="padding:20px;"></p>
                     <p style="padding:20px;"></p>
 					<!-- or use style="margin-top:70px;" for button -->
-                    <a class="btn btn-warning btn-block" href="#reservetable" role="button" data-toggle="modal" data-target="#reserveTable">Reserve Table</a>
+                    <a class="btn btn-warning btn-block" role="button" data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>
                 </div>
             </div>
             </div>
@@ -379,11 +379,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-         });
-    </script>
     
 </body>
 
