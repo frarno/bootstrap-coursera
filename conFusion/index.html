@@ -8,11 +8,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->    
      <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/mystyles.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/mystyles.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     
     <title>Ristorante Con Fusion</title>
@@ -53,7 +54,7 @@
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal">
+                    <li><a id="login">
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
@@ -188,7 +189,7 @@
                     <p style="padding:20px;"></p>
                     <p style="padding:20px;"></p>
 					<!-- or use style="margin-top:70px;" for button -->
-                    <a class="btn btn-warning btn-block" role="button" data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>
+                    <a class="btn btn-warning btn-block" role="button"  id="reserveTable">Reserve Table</a>
                 </div>
             </div>
             </div>
@@ -382,17 +383,24 @@
     </footer>
 
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>     
+
     <script>
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 2000 } );
-                          $("#carousel-pause").click(function(){
+            $("#carousel-pause").click(function(){
                 $("#mycarousel").carousel('pause');
             });
-                        $("#carousel-play").click(function(){
+            $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
+            });
+            $("#login").click(function(){
+                $("#loginModal").modal('toggle');
+            });
+            $("#reserveTable").click(function(){
+                $("#reserveTableModal").modal('toggle');
             });
         });
     </script>
